@@ -12,7 +12,6 @@ function Item({
     loggedIn,
     favItems,
     setInfoState,
-    infoState,
 }) {
     const addToFavorite = (index) => {
         const chosenItem = allItems[index].name;

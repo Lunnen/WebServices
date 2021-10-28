@@ -7,7 +7,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Input from "@material-ui/core/Input";
 
-function SignupForm({ serverURL, setInfoState, infoState }) {
+function SignupForm({ serverURL, setInfoState }) {
     const defaultInputString = { name: "", password: "" };
     const [input, setInput] = React.useState(defaultInputString);
 
@@ -53,12 +53,6 @@ function SignupForm({ serverURL, setInfoState, infoState }) {
     return (
         <div className="container">
             <form onSubmit={handleSubmit}>
-                {infoState ? (
-                    <h4 style={{ color: "#ff0000" }}>{infoState}</h4>
-                ) : (
-                    ""
-                )}
-
                 <h3>Create a new account here:</h3>
                 <Input
                     type="text"

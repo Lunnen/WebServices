@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({ serverURL, loggedIn, fetchAll, setInfoState, infoState }) {
+function Form({ serverURL, loggedIn, fetchAll, setInfoState }) {
     const defaultInputString = { name: "", desc: "", price: "" };
     const [input, setInput] = React.useState(defaultInputString);
 
@@ -50,12 +50,6 @@ function Form({ serverURL, loggedIn, fetchAll, setInfoState, infoState }) {
     return (
         <div className="container">
             <form className="search" onSubmit={handleSubmit}>
-                {infoState ? (
-                    <h4 style={{ color: "#ff0000" }}>{infoState}</h4>
-                ) : (
-                    ""
-                )}
-
                 <h3>Add new product here:</h3>
                 <input
                     type="text"

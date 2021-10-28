@@ -7,7 +7,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Input from "@material-ui/core/Input";
 
-function LoginForm({ serverURL, setLoggedIn, setInfoState, infoState }) {
+function LoginForm({ serverURL, setLoggedIn, setInfoState }) {
     /* Form input handling */
     const defaultInputString = { name: "", password: "" };
     const [input, setInput] = React.useState(defaultInputString);
@@ -55,12 +55,6 @@ function LoginForm({ serverURL, setLoggedIn, setInfoState, infoState }) {
     return (
         <div className="container">
             <form onSubmit={handleSubmit}>
-                {infoState ? (
-                    <h4 style={{ color: "#ff0000" }}>{infoState}</h4>
-                ) : (
-                    ""
-                )}
-
                 <h3>Login with credentials here:</h3>
                 <Input
                     type="text"

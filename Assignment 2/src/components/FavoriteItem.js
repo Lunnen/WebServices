@@ -1,6 +1,6 @@
 import React from "react";
 
-function FavoriteItem({ item, index, favItem }) {
+function FavoriteItem({ favItem }) {
     return (
         <div className="item">
             <h4>{favItem.name}</h4>

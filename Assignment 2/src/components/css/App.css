@@ -1,0 +1,77 @@
+:root {
+    --color-first-and-bg: #209cee;
+    --color-secondary: #187bcd;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-first-and-bg);
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.container {
+    background: #e8e8e8;
+    border-radius: 4px;
+    max-width: 500px;
+    padding: 0.25rem 2rem;
+    margin: 0.5rem 0rem;
+}
+
+.item {
+    align-items: center;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 3px 10px;
+}
+.logoutButton {
+    float: right;
+    background: var(--color-secondary);
+    margin: 0.5rem 0.5rem;
+    color: #f9f7f5;
+}
+form,
+.form {
+    text-align: center;
+}
+.navbar,
+.search {
+    background: #e8e8e8;
+    border-radius: 4px;
+    max-width: 500px;
+    padding: 0.25rem 2rem;
+    margin: 0.5rem 0rem;
+}
+.input {
+    width: 98%;
+}
+
+.submit {
+    width: 100%;
+    height: 2rem;
+    margin: 0.2rem 0rem;
+    background: var(--color-secondary);
+    color: #f9f7f5;
+}
+
+img {
+    width: 97%;
+    padding: 0.5rem 0.25rem;
+}

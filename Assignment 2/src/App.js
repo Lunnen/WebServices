@@ -25,6 +25,7 @@ function App() {
     const [loggedIn, setLoggedIn] = useState();
     const [infoState, setInfoState] = useState();
 
+    // -------------------------------------------------------
     const fetchAll = async (thisURI) => {
         await fetch(serverURL + thisURI, {
             method: "GET",
@@ -46,6 +47,8 @@ function App() {
 
         setInit(false);
     };
+    // -------------------------------------------------------
+    /* The two useEffects keeping track of things */
 
     useEffect(() => {
         setTimeout(() => {
@@ -60,10 +63,9 @@ function App() {
             fetchAll("/product/all");
             fetchAll("/product/favorites");
         }
-
-        console.log("LOGIN DATA -> " + loggedIn);
     }, [loggedIn]);
 
+    // -------------------------------------------------------
     /* Single pages - Only used if ternary says so */
     const noBEinfo = () => {
         return <h1 style={{ textAlign: "center" }}>No info from Backend!</h1>;
@@ -73,7 +75,7 @@ function App() {
         return (
             <div className="container">
                 {favItems.map((favItem, index) => (
-                    <FavoriteItem key={index} index={index} favItem={favItem} />
+                    <FavoriteItem key={index} favItem={favItem} />
                 ))}
             </div>
         );
@@ -93,7 +95,6 @@ function App() {
                         loggedIn={loggedIn}
                         favItems={favItems}
                         setInfoState={setInfoState}
-                        infoState={setInfoState}
                     />
                 ))}
             </>
@@ -103,7 +104,7 @@ function App() {
     const nothingYet = () => {
         return <p>Just an empty list!</p>;
     };
-
+    // -------------------------------------------------------
     /* pickable pages */
     const hasBEinfo = () => {
         return (
@@ -122,7 +123,6 @@ function App() {
                     loggedIn={loggedIn}
                     fetchAll={fetchAll}
                     setInfoState={setInfoState}
-                    infoState={setInfoState}
                 />
             </>
         );
@@ -135,17 +135,12 @@ function App() {
                     serverURL={serverURL}
                     setLoggedIn={setLoggedIn}
                     setInfoState={setInfoState}
-                    infoState={setInfoState}
                 />
-                <SignupForm
-                    serverURL={serverURL}
-                    setInfoState={setInfoState}
-                    infoState={setInfoState}
-                />
+                <SignupForm serverURL={serverURL} setInfoState={setInfoState} />
             </>
         );
     };
-
+    // -------------------------------------------------------
     /* MAIN PAGE */
     return (
         <div className="app">

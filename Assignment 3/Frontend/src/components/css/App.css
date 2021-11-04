@@ -1,0 +1,236 @@
+/* BASE SETTINGS */
+:root {
+    --color-first-and-bg: #dae0e6;
+    --color-secondary: #ff5700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-first-and-bg);
+}
+
+.app {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 4px;
+    max-width: 97%;
+    padding: 0.25rem 0.4rem;
+    margin-top: 3rem;
+}
+
+.item-wrapper {
+    align-items: center;
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    /* padding: 3px 10px; */
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+}
+.logoutButton {
+    float: right;
+    color: #1c1c1c;
+    margin: 0.5rem 0rem;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.4rem;
+    width: 7rem;
+    gap: 5px;
+}
+.logoutButton:hover {
+    background: #0975d0;
+    color: #fffff8;
+}
+.loginButton {
+    border-color: #0079d3;
+    background: #ffffff;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 15rem;
+    color: #0079d3;
+    border: 2px solid #0079d3;
+}
+
+.search {
+    width: 70%;
+}
+
+.postBox {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    padding: 0.25rem 2rem;
+    height: 49px;
+    z-index: 1000;
+}
+
+/* FORMS */
+form,
+.form {
+    margin: 0.5rem 0rem;
+    text-align: center;
+    width: 70%;
+}
+.width100perc {
+    width: 100%;
+}
+.input {
+    width: 98%;
+    margin: 0.2rem 0.2rem;
+}
+.input-desc {
+    height: 4rem;
+    text-align: top left !important;
+}
+
+textarea {
+    resize: vertical;
+    overflow: visible;
+    width: 100%;
+    min-height: 4rem;
+}
+
+.loginPageBoxes {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 2.2rem 0rem;
+}
+
+.submit {
+    width: 30%;
+    float: right;
+    height: 2rem;
+    margin: 0.2rem 0.4rem;
+    background: var(--color-secondary);
+    color: #f9f7f5;
+}
+
+.comment {
+    background: #ccae38;
+}
+
+.item-container {
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    background: #edf0f3;
+    border: 1px solid #bdc8d3;
+    margin: 0.5rem 0rem;
+}
+
+.item-container:hover {
+    outline: 0.1rem solid #898989;
+}
+
+.search:hover {
+    outline: 1px solid #0975d0;
+}
+
+.top-item-text {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+}
+
+#creator-info {
+    color: #b1b4b5;
+}
+
+/* POST fade effect */
+.post-description {
+    overflow: hidden;
+    height: 5rem;
+    padding: 0.1rem 0.2rem;
+}
+
+.post-description,
+.fade {
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+.specificPost-description {
+    height: auto;
+    -webkit-mask-image: none;
+}
+
+/* VOTING - START */
+.post-vote-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 0.9rem;
+    width: 2.3rem;
+}
+
+.post-up-vote:hover,
+.delete-button:hover {
+    color: #f60757;
+}
+.post-down-vote:hover {
+    color: #414cb2;
+}
+
+.post-vote-value {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.saveButton {
+    float: right;
+    margin: 0rem 0.1rem;
+    color: #fff;
+    background: #0975d0;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 16px;
+}
+
+.cancelButton {
+    float: right;
+    margin: 0rem 0.1rem;
+    color: #0975d0;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 16px;
+}
+
+.userLoggedIn {
+    background: #ff5700;
+    color: #ffffff;
+    padding: 0.25rem 0.7rem;
+    border-radius: 16px;
+}

@@ -137,6 +137,10 @@ public class PostController {
                 response.setStatus(401);
                 return "User doesn't exist!";
             }
+            case 4: {
+                response.setStatus(401);
+                return "Couldn't delete post";
+            }
             default: {
                 response.setStatus(500);
                 return "Something went wrong!";

@@ -81,11 +81,14 @@ public class PostService {
             return 0; // User has no rights
         }
 
-        if(commentService.deleteCommentsRelatedToPost(postCheck) == 1){
-            postRepo.delete(postCheck);
-            return 1;// Success
+        if(postCheck.getComments().size() != 0
+                && commentService.deleteCommentsRelatedToPost(postCheck) == 6){
+
+            return 4; //Couldn't delete
         }
-        return 4; //default
+
+        postRepo.delete(postCheck);
+        return 1;// Success
     }
 
     public int updatePost(String token, long id, String description) {

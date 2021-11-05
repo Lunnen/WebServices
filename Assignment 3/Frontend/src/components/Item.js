@@ -301,6 +301,10 @@ function Item({
                                             key={index}
                                             theComment={theComment}
                                             loggedIn={loggedIn}
+                                            itemId={item.id}
+                                            serverURL={serverURL}
+                                            setInfoState={setInfoState}
+                                            fetchAll={fetchAll}
                                         />
                                     ))}
                             </>
